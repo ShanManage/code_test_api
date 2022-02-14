@@ -19,7 +19,7 @@ exports.createPost = async (req, res, next) => {
         let post = new Post({
             postTitle: req.body.title,
             description: req.body.description,
-            imagePath: filePath,
+            imagePath: fileName,
             likes: 0,
             dislikes: 0,
         });

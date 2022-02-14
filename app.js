@@ -4,12 +4,13 @@ require("dotenv").config();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const fileUpload = require('express-fileupload');
-
+const path = require('path');
 const posts_controller = require('./controllers/posts.controller');
 
 const app = express();
 
 app.use(express.static(__dirname + '/uploads')); 
+// app.use(express.static(path.join(__dirname, '/uploads')));
 
 app.use(bodyParser.json());
 app.use(cors());
